@@ -140,6 +140,7 @@ class Character{
                 case "4":
                     this.Recover(3);
                     System.out.println("OrangeDragon recover'd resources");
+                    inputValid = true;
                     break;
                 default:
                     System.out.println("Invalid action must be a number 1 - 4");
