@@ -27,10 +27,10 @@ public class Character{
 
     public boolean takeDamage(int damage){
         if (defended){
-            this.HP -= damage / 2;
+            this.HP = Math.max(this.HP - damage / 2, 0);
             return false;
         } else{
-            this.HP -= damage;
+            this.HP = Math.max(this.HP - damage, 0);
             return true;
             
         }
@@ -48,6 +48,7 @@ public class Character{
         
     }
     
+    
 
     public void Defend() {
         System.out.println(this.name + " is defending the next attack.");
@@ -57,7 +58,7 @@ public class Character{
     public boolean Special(Character character, int ResourceCost, int damage){
         if (this.resources >= ResourceCost){
             this.resources -= ResourceCost;
-            if(Attack(character, damage)){
+            if(character.takeDamage(damage)){
                 System.out.println(this.name + " used a special attack on " + character.name + ". " + character.name + "'s HP: " + character.HP);
             } else{
                 System.out.println(character.name + " blocked " + this.name + "'s special attack.");
