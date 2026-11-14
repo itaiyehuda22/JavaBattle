@@ -1,8 +1,13 @@
 package edu.starter;
 
+import java.util.Scanner;
+
 public class Encounter {
-    
-    public static boolean newEncouter(Character player, Character enemy) {
+    /**
+     * @pre Both characters HP > 0; player != null && enemy != null && player != enemy.
+     * @post player.HP == 0 || enemy.HP == 0
+    **/
+    static boolean newEncouter(Character player, Character enemy) {
 
         boolean playerKnocked = false;
         boolean enemyKnocked = false;
@@ -23,4 +28,6 @@ public class Encounter {
             return false;
         }
     }
+
+
 }
