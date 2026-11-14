@@ -11,3 +11,5 @@ I also added a create character function which makes creating characters more si
 The main class starts the game, create the characters, and handle the turns and actions with the battle loop while the characters class handles the characters data and actions.
 
 Also There is a specific class for choosing a reward between encounters. The class uses an enum to make sure the user chooses a valid reward in the console and gives it to him.
+
+I added @pre and @post comments on the src code. @pre describes conditions that must be true before calling a method. @post describes conditions that will be true after calling the function. If @pre conditions are not satisfied there could runtime errors or logical errors for example fields like HP going below or above limits.
