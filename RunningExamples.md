@@ -96,7 +96,73 @@ OrangeDragon used a special attack on Enemy. Enemy's HP: -10
 ```text
 You have won the battle with 65 health and 2 resources left congrats!
 ```
+## reward
+**After winning your first encouter you can choose a reward**
+```text
+You have won the battle with 80 HP and 5 resources left
+Choose your reward for winning the battle
+1) Recover 25 HP to the maximum of 100
+2) Upgrade attack damage by 2
+```
+**you can choose either to restore HP or Upgrade attack damage**
+```text
+input: 1
+OrangeDragon Restored 25 HP
+SECOND BATTLE
+HP: 100 Resources: 5 Enemey HP: 45
 
+OR:
+input: 2
+Changed OrangeDragon attack's damage to 12
+SECOND BATTLE
+HP: 80 Resources: 5 Enemey HP: 45
+Choose your action:
+1) Attack
+2) Defend
+3) Special
+4) Recover resources
+input: 1
+OrangeDragon attacked enemy2. enemy2's HP: 33 //damage is 12 now
+```
+
+**Healing doesn't go past max HP**
+```text
+You have won the battle with 80 HP and 5 resources left
+Choose your reward for winning the battle
+1) Recover 25 HP to the maximum of 100
+2) Upgrade attack damage by 2
+input: 1
+OrangeDragon Restored 25 HP
+SECOND BATTLE
+HP: 100 Resources: 5 Enemey HP: 45
+```
+
+**Changing attack damage does not change the special damage**
+```text
+Changed OrangeDragon attack's damage to 12
+SECOND BATTLE
+HP: 80 Resources: 5 Enemey HP: 45
+Choose your action:
+1) Attack
+2) Defend
+3) Special
+4) Recover resources
+input: 3
+OrangeDragon used a special attack on enemy2. enemy2's HP: 30 //dealt 15 HP and not 12 or 17
+```
+
+**Choosing an invalid reward makes you repick**
+```text
+Choose your reward for winning the battle
+1) Recover 25 HP to the maximum of 100
+2) Upgrade attack damage by 2
+input: asd
+Invalid option please choose again:
+input: 3
+Invalid option please choose again:
+input: 1
+OrangeDragon Restored 25 HP
+```
 ## edge cases
 
 **If you don't have enough resources you can't use a special attack and will need to choose a diffrent action**
