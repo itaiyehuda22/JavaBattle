@@ -62,8 +62,8 @@ public class Character{
      * @pre damage > 0.
      * @post HP >= 0
      */
-    boolean takeDamage(int damage){
-        if (this.defended){
+    public boolean takeDamage(int damage){
+        if (defended){
             this.HP = Math.max(this.HP - damage / 2, 0);
             return false;
         } else{
@@ -98,6 +98,7 @@ public class Character{
         
         
     }
+
 
     /**
      * @pre newDamage > 0.
