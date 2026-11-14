@@ -9,3 +9,5 @@ For example in the special attack the program check's the character's resources 
 I also added a create character function which makes creating characters more simple and clean.
 
 The main class starts the game, create the characters, and handle the turns and actions with the battle loop while the characters class handles the characters data and actions.
+
+Also There is a specific class for choosing a reward between encounters. The class uses an enum to make sure the user chooses a valid reward in the console and gives it to him.
